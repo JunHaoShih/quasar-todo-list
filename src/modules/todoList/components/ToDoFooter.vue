@@ -24,7 +24,9 @@ export default class ToDoFooter extends Vue {
   todoListStore = TodoListStore();
 
   onRemoveClicked(): void {
-    this.todoListStore.removeCompleteTasks();
+    // this.todoListStore.removeCompleteTasks();
+    const tt = this.todoListStore.tasks;
+    window.ipcRenderer.doAThing('test-one');
   }
 }
 </script>
